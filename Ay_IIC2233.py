@@ -3,12 +3,16 @@ from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QLabel
 from PyQt5.QtGui import QPixmap, QIcon
 from PyQt5.QtCore import Qt, QSize
 
+# Creamos nuestra clase en donde tendremos los componentes graficos de nuestro programa
+# Hereda de QMainWindow
 
 class Tinder(QMainWindow):
     def __init__(self):
         super().__init__()
         self.init_tinder()
 
+    # Definimos un metodo en donde inicializaremos cada componente
+    # y definiremos las conexiones de nuestro programa
     def init_tinder(self):
         # Titulo
         self.titulo = QLabel(self)
@@ -20,6 +24,7 @@ class Tinder(QMainWindow):
         self.match = QPushButton(self)
         self.match.setText("Match")
         self.match.move(70, 60)
+        # Con esta linea, conectaremos el click a nuestro boton con cierta funcionalidad que hayamos creado
         self.match.clicked.connect(self.hacer_match)
 
         # Boton Next
