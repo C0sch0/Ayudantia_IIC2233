@@ -1,3 +1,5 @@
+# Diego Iruretagoyena, Ayundatia 11
+
 import sys
 from PyQt5.QtWidgets import QMainWindow, QPushButton, QApplication, QLabel
 from PyQt5.QtGui import QPixmap, QIcon
@@ -15,6 +17,8 @@ class Tinder(QMainWindow):
     # y definiremos las conexiones de nuestro programa
     def init_tinder(self):
         # Titulo
+        # Para crear un texto sobre nuestra ventana principal, usamos un QLabel, fijamos su contenido
+        # y luego lo movemos a la posicion deseada. Por ultimo, usamos show para que aparezca al correr el programa
         self.titulo = QLabel(self)
         self.titulo.setText("Progra-Tinder")
         self.titulo.move(160,10)
